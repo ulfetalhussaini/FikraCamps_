@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Q4</title>
+    </head>
+    <body>
+        
+        <center><h2>Convert numbers to words</h2 ></center>
+        
+        <p style="padding: 15px;"><center>
+            Enter your number : <input type="text" id="number">
+            <br><br>
+            <button onclick="Convert();">Convert</button>
+        </center></p>
+        <hr>
+        <p id="result" style="padding: 15px;"></p>                  <!-- display result -->
+
+        <script>
+            function Convert() {
+                var value = document.getElementById('number').value;  //Get the value of input
+                var result = "";                                      //Declare variable
+                for( var i=0; i<value.length; i++ )
+                {
+                    switch(value[i])                                    
+                    {
+                        case "0": result += "Zero"; break;           //in "case" we use the number as string because the "value[i]" is a string
+                        case "1": result += "One"; break;
+                        case "2": result += "Two"; break;
+                        case "3": result += "Three"; break;
+                        case "4": result += "Four"; break;
+                        case "5": result += "Five"; break;
+                        case "6": result += "Six"; break;
+                        case "7": result += "Seven"; break;
+                        case "8": result += "Eight"; break;
+                        case "9": result += "Nine"; break;
+                    }
+                    if( i != value.length - 1 ) result += ',';      /* if statment to add "," after each partial "value[i]" but if the partial
+                                                                        is the last one in the "for loop" we don't add that "," */
+                }
+
+                document.getElementById('result').innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

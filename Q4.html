@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Q4</title>
+    </head>
+    <body>
+      
+        
+<h3><center>Click to combine arrays</center></h3>
+
+<center><button onclick="myFunction()">Combine</button><center>
+
+<p id="array"></p>
+
+<script>
+    
+function myFunction() {
+    var x = ["a", "b", "c"];  //declare variables
+    var y = ["1", "2", "3"];
+    var z = "";
+    
+    for(var i=0; i < x.length; i++){        
+        
+        if(i != x.length - 1)                   /* while the loop less than (x)length, combine the first variable 
+                                                    of x array with coma & the first variable of the y array */
+            z += x[i] + "," +y[i] + ",";
+        else
+            z += x[i] + "," + y[i];             //without coma at the end of new array (z)
+        
+
+    }
+
+                document.getElementById("array").innerHTML = z;  
+
+    }
+</script>
+        
+    </body>
+</html>
